@@ -14,7 +14,7 @@ Latency matters a lot in certain kinds of software—think about systems where e
 I’m running all the experiments on this setup:
 
 - Operating System: Ubuntu 24.04.2 LTS
-- Hardware: ASUSTeK COMPUTER INC. E500 G9_WS760T
+- Hardware Model: ASUS PRIME B760M-A
 - Processor: Intel Core i7-14700 (28 threads)
 - Memory: 32.0 GiB DDR5
 
