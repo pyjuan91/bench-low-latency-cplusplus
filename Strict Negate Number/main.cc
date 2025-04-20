@@ -30,6 +30,14 @@ static void BM_LowLatencyMethod(benchmark::State& state) {
   }
 }
 
+static void BM_EmptyLoop(benchmark::State& st) {
+  for (auto _ : st) {
+    for (auto x : random_doubles) {
+      benchmark::DoNotOptimize(x);
+    }
+  }
+}
+
 static void BM_NormalMethodExperiment(benchmark::State& state) {
   StrictNegateNumber sn;
   for (auto _ : state) {
@@ -46,6 +54,7 @@ static void BM_LowLatencyMethodExperiment(benchmark::State& state) {
 
 BENCHMARK(BM_NormalMethod);
 BENCHMARK(BM_LowLatencyMethod);
+BENCHMARK(BM_EmptyLoop);
 BENCHMARK(BM_NormalMethodExperiment);
 BENCHMARK(BM_LowLatencyMethodExperiment);
 BENCHMARK_MAIN();
