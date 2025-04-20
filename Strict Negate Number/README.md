@@ -28,4 +28,4 @@ By manipulating the sign bit directly:
 |BM_NormalMethodExperiment (10 M) | 38.06 ms | 1.00× |
 |BM_LowLatencyMethodExperiment (10 M) | 35.95 ms | 1.22× |
 
-<img src="Screenshot.png" alt="drawing" width="30%"/>
+<img src="Screenshot.png" alt="drawing" width="60%"/>
