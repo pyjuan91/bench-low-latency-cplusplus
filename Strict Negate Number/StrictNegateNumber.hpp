@@ -1,12 +1,13 @@
 #ifndef STRICTNEGATENUMBER_HPP
 #define STRICTNEGATENUMBER_HPP
 
-#include <iostream>
 #include <cstdint>
 #include <cstdlib>
+#include <iostream>
+#include <vector>
 
 class StrictNegateNumber {
-public:
+ public:
   StrictNegateNumber(bool debug = false) : debug_(debug) {}
 
   void NormalMethod(double number) {
@@ -20,6 +21,12 @@ public:
     if (debug_) {
       std::cout << "negated number: " << number << std::endl;
       std::cout << "negated number address: " << &number << std::endl;
+    }
+  }
+
+  void NormalMethodExperiment(const std::vector<double>& numbers) {
+    for (const auto& number : numbers) {
+      NormalMethod(number);
     }
   }
 
@@ -39,8 +46,14 @@ public:
     }
   }
 
-private:
+  void LowLatencyMethodExperiment(const std::vector<double>& numbers) {
+    for (const auto& number : numbers) {
+      LowLatencyMethod(number);
+    }
+  }
+
+ private:
   bool debug_;
 };
 
-#endif // STRICTNEGATENUMBER_HPP
+#endif  // STRICTNEGATENUMBER_HPP
